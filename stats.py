@@ -14,3 +14,8 @@ def get_letter_count(filepath):
 			else:
 				char_dict[c] += 1
 	return char_dict
+
+def sort_letter_count(filepath):
+	unsorted_dict = get_letter_count(filepath)
+	sorted_dict = dict(sorted(unsorted_dict.items(), key=lambda item: item[1], reverse=True))
+	return sorted_dict
